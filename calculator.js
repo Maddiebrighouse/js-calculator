@@ -1,8 +1,13 @@
 let display = ""
 let memory = ""
 
+// Show equation on screen
 function buttonFunction(){
-  if value === num {
-document.getElementById().value.push(Array.display)
+document.getElementById().value.innerHTML.output
 }
 }
+
+
+//clear entry
+
+//clear all
