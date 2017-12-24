@@ -15,7 +15,7 @@
 }
 .output {
   margin-left:45px;
-  margin-top: 199px;
+  margin-top: 175px;
   border: red;
   width: 310px;
   height: 41px;
@@ -49,4 +49,12 @@ body {
 .calImage{
   width: 400px;
 
+}
+p {
+    margin-top: 24px;
+  	margin-bottom: -2px;
+    font-size: 25px;
+}
+i {
+  font-size: 10px;
 }
