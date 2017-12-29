@@ -33,7 +33,7 @@ function buttInput(value) {
     newDisplay = addDecimal(value);
   }
 
-console.log(newDisplay);
+  console.log(newDisplay);
 
   document.getElementById("entry").innerHTML = newDisplay;
 }
@@ -47,6 +47,11 @@ function addOperator(value) {
 }
 
 function addInteger(value) {
+  
+  if (document.getElementById("entry").innerHTML === "0") {
+    document.getElementById("entry").innerHTML = "";
+  }
+
   return document.getElementById("entry").innerHTML + value;
 }
 
