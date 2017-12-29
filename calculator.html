@@ -10,46 +10,34 @@
   <div class="calcultorbody">
     <!--Display-->
     <div class="output">
-<<<<<<< HEAD
-      <h2 id= "display" ></h2>
-=======
->>>>>>> 7f2ded0f9ddb1a52446668b3a5ad4303b53b309d
-      <div id= "entry">
-        <p>0</p>
-        <div id="equation">
-<<<<<<< HEAD
-          <p>3</p>
-=======
-          <i>0</i>
->>>>>>> 7f2ded0f9ddb1a52446668b3a5ad4303b53b309d
-        </div>
-      </div>
+      <div id="entry"></div>
+      <div id="equation"></div>
     </div>
     <!--Button Section -->
     <div class="buttonSection">
-      <button id="A"value="A">A</button>
-      <button id="CE"value="CE">CE</button>
-      <button id="button"value="/100">%</button>
-      <button id="button"value="/">%</button>
+      <button id="C"value="C"onclick="clear()">A</button>
+      <button id="CE"value="CE"onclick="buttInput()">CE</button>
+      <button id="button"value="/100"onclick="buttInput()">%</button>
+      <button id="button"value="/"onclick="buttInput()">%</button>
       <br>
-      <button id="button"value="7">7</button>
-      <button id="button"value="8">8</button>
-      <button id="button"value="9">9</button>
-      <button id="button"value="*">X</button>
+      <button id="button"value="7"onclick="buttInput(7)">7</button>
+      <button id="button"value="8"onclick="buttInput(8)">8</button>
+      <button id="button"value="9"onclick="buttInput(9)">9</button>
+      <button id="button"value="*"onclick="buttInput('*'')">X</button>
       <br>
-      <button id="button"value="4">4</button>
-      <button id=" button"value="5">5</button>
-      <button id="button"value="6">6</button>
-      <button id="button"value="-">-</button>
+      <button id="button"value="4"onclick="buttInput(4)">4</button>
+      <button id="button"value="5"onclick="buttInput(5)">5</button>
+      <button id="button"value="6"onclick="buttInput(6)">6</button>
+      <button id="button"value="-"onclick="buttInput('-')">-</button>
       <br>
-      <button id="button"value="1">1</button>
-      <button id="button"value="2">2</button>
-      <button id="equals"value="3">3</button>
-      <button id="button"value="+">+</button>
+      <button id="button"value="1"onclick="buttInput(1)">1</button>
+      <button id="button"value="2"onclick="buttInput(2)">2</button>
+      <button id="equals"value="3"onclick="buttInput(3)">3</button>
+      <button id="button"value="+"onclick="buttInput('+')">+</button>
       <br>
-      <button id="button"class="zeroButton" value="0">0</button>
-      <button id="button"value=".">.</button>
-      <button id="button"class="equalButton" value="=">=</button>
+      <button id="button"class="zeroButton"value="0"onclick="buttInput(0)">0</button>
+      <button id="button"value="."onclick="buttInput('.')">.</button>
+      <button id="button"class="equalButton"value="="onclick="execute()">=</button>
     </div>
   </div>
 </body>

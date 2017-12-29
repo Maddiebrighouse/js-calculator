@@ -22,8 +22,8 @@
   background: #ffffff00;
   font-family: digitalfont;
   color: red;
-  position: absolute;
-  direction: rtl;
+  /* position: absolute;
+  /*direction: rtl;*/
 }
 .buttonSection{
   margin-top: 313px;

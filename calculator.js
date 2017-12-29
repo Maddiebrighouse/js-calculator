@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-
-window.onload = function (){
-document.getElementById("0").addEventListener("click", display);
+var entryField = document.getElementById("entry");
+var answerField = document.getElementById("equation");
+/*window.onload = function (){
+document.getElementByValue("0").addEventListener("click", display);
 }
 let display = [];
 let equation = [];
@@ -10,27 +10,70 @@ let equation = [];
 function buttonFunction(){
   let display = "help im a fish"
   document.getElementById("entry").innerHTML = display;
-=======
-let equation = "";
-let display = 0;
+}*/
+// Setup entry to show 0
+window.onload = function () {
+  document.getElementById("entry").innerHTML = "0";
+}
 
-function start() {
-  var buttons = document.getElementsById('button');
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', getButton);
 
+
+
+function buttInput(value) {
+
+  var operators = ["+", "-", "*", "/"];
+  var newDisplay;
+
+  //Determine input pathway
+  if (operators.includes(value)) {
+    newDisplay = addOperator(value);
+  } else if (value.parseInt !== NaN) {
+    newDisplay = addInteger(value);
+  } else if (value === ".") {
+    newDisplay = addDecimal(value);
+  }
+
+console.log(newDisplay);
+
+  document.getElementById("entry").innerHTML = newDisplay;
+}
+
+
+
+/* HELPER FUNCTIONS */
+
+function addOperator(value) {
+  return document.getElementById("entry").innerHTML + value;
+}
+
+function addInteger(value) {
+  return document.getElementById("entry").innerHTML + value;
+}
+
+function addDecimal(value) {
+  if (!(document.getElementById("entry").innerHTML.includes("."))) {
+    document.getElementById("entry").innerHTML += value;
   }
 }
 
-function calculate() {
-  result= eval(equation);
-  console.log(display);
-  document.getElementById("result").innerHTML = "<p>" + result + "</p>";
->>>>>>> 7f2ded0f9ddb1a52446668b3a5ad4303b53b309d
+
+
+/* CLEAR */
+
+function clear() {
+  document.getElementById("entry").innerHTML = "0";
+  document.getElementById("equation").innerHTML = "";
 }
 
 
 
+/* EXECUTE */
+
+function execute() {
+  var equation = document.getElementById("entry").innerHTML;
+
+  document.getElementById("equation").innerHTML = eval(equation);
+}
 //clear entry
 
 //clear all
