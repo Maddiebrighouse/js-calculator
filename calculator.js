@@ -1,5 +1,7 @@
 var entryField = document.getElementById("entry");
 var answerField = document.getElementById("equation");
+
+var operators = ["+", "-", "*", "/"];
 /*window.onload = function (){
 document.getElementByValue("0").addEventListener("click", display);
 }
@@ -21,7 +23,6 @@ window.onload = function () {
 
 function buttInput(value) {
 
-  var operators = ["+", "-", "*", "/"];
   var newDisplay;
 
   //Determine input pathway
@@ -41,11 +42,16 @@ function buttInput(value) {
 
 
 /* HELPER FUNCTIONS */
-
+//
 function addOperator(value) {
-  return document.getElementById("entry").innerHTML + value;
+  // Check if last chracter of array is operator
+  if (!operators.includes(document.getElementById("entry").innerHTML.slice(-1))) {
+    return document.getElementById("entry").innerHTML + value;
+  } else {
+    return document.getElementById("entry").innerHTML;
+  }
 }
-
+//
 function addInteger(value) {
 
   if (document.getElementById("entry").innerHTML === "0") {
@@ -54,14 +60,12 @@ function addInteger(value) {
 
   return document.getElementById("entry").innerHTML + value;
 }
-
+//
 function addDecimal(value) {
-  // Split string into array with values, analyse most
-  // recent value to see if a decimal is present
+  // Split string into array with values, analyse most recent value to see if a decimal is present
   var valueArray = document.getElementById("entry").innerHTML.split(/[+\-\/*]/);
 
-  console.log('====='+valueArray);
-
+  // Get last value in array and check if contains decimal place
   if (!valueArray[valueArray.length - 1].includes('.')) {
     document.getElementById("entry").innerHTML += value;
   }
@@ -71,9 +75,13 @@ function addDecimal(value) {
 
 /* CLEAR */
 
-function clear() {
+function erase() {
   document.getElementById("entry").innerHTML = "0";
   document.getElementById("equation").innerHTML = "";
+}
+
+function eraseLatestEntry() {
+  document.getElementById("entry").innerHTML = "0";
 }
 
 
