@@ -25,12 +25,12 @@ function buttInput(value) {
   var newDisplay;
 
   //Determine input pathway
-  if (operators.includes(value)) {
+  if (value === '.') {
+    newDisplay = addDecimal(value);
+  } else if (operators.includes(value)) {
     newDisplay = addOperator(value);
   } else if (value.parseInt !== NaN) {
     newDisplay = addInteger(value);
-  } else if (value === ".") {
-    newDisplay = addDecimal(value);
   }
 
   console.log(newDisplay);
@@ -47,7 +47,7 @@ function addOperator(value) {
 }
 
 function addInteger(value) {
-  
+
   if (document.getElementById("entry").innerHTML === "0") {
     document.getElementById("entry").innerHTML = "";
   }
@@ -56,7 +56,13 @@ function addInteger(value) {
 }
 
 function addDecimal(value) {
-  if (!(document.getElementById("entry").innerHTML.includes("."))) {
+  // Split string into array with values, analyse most
+  // recent value to see if a decimal is present
+  var valueArray = document.getElementById("entry").innerHTML.split(/[+\-\/*]/);
+
+  console.log('====='+valueArray);
+
+  if (!valueArray[valueArray.length - 1].includes('.')) {
     document.getElementById("entry").innerHTML += value;
   }
 }
