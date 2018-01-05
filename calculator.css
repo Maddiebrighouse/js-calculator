@@ -15,15 +15,15 @@
 }
 .output {
   margin-left:45px;
-  margin-top: 175px;
+  margin-top: 205px;
   border: red;
   width: 310px;
   height: 41px;
   background: #ffffff00;
   font-family: digitalfont;
   color: red;
-  /* position: absolute;
-  /*direction: rtl;*/
+  position: absolute;
+overflow: scroll;
 }
 .buttonSection{
   margin-top: 313px;

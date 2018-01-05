@@ -2,18 +2,7 @@ var entryField = document.getElementById("entry");
 var answerField = document.getElementById("equation");
 
 var operators = ["+", "-", "*", "/"];
-/*window.onload = function (){
-document.getElementByValue("0").addEventListener("click", display);
-}
-let display = [];
-let equation = [];
 
-// Show equation on screen
-function buttonFunction(){
-  let display = "help im a fish"
-  document.getElementById("entry").innerHTML = display;
-}*/
-// Setup entry to show 0
 window.onload = function () {
   document.getElementById("entry").innerHTML = "0";
 }
