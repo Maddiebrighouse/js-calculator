@@ -23,7 +23,7 @@
   font-family: digitalfont;
   color: red;
   position: absolute;
-overflow: scroll;
+  overflow: scroll;
 }
 .buttonSection{
   margin-top: 313px;
